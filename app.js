@@ -151,6 +151,18 @@ var taskIncomplete = function() {
   //When the checkbox is unchecked
   //Append the task list item to the #incompleteTasks.
   var listItem = this.parentNode;
+  if (listItem.classList.contains("edit-tasks")) {
+    listItem.classList = "functionality__incompleted-tasks__task task edit-tasks"
+
+  } else {
+    listItem.classList = "functionality__incompleted-tasks__task task"
+  }
+  listItem.children[0].classList = "functionality__incompleted-tasks__task__checkbox checkbox"
+  listItem.children[1].classList = "functionality__incompleted-tasks__task__description task-description"
+  listItem.children[2].classList = "functionality__incompleted-tasks__task__text task-input"
+  listItem.children[3].classList = "functionality__incompleted-tasks__task__edit btn-edit btn"
+  listItem.children[4].classList = "functionality__incompleted-tasks__task__delete btn-delete btn"
+  listItem.children[4].children[0].classList = "functionality__incompleted-tasks__task__delete__img delete-img"
   incompleteTaskHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskCompleted);
 }
