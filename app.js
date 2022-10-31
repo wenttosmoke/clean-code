@@ -31,22 +31,22 @@ var createNewTaskElement = function(taskString) {
   var deleteButton = document.createElement("button"); //delete button
   var deleteButtonImg = document.createElement("img"); //delete button image
 
-  listItem.className = "functionality__incompleted-tasks task"
+  listItem.className = "functionality__incompleted-tasks__task task"
 
   label.innerText = taskString;
   label.className = "task-description";
 
   //Each elements, needs appending
   checkBox.type = "checkbox";
-  checkBox.className = "functionality__incompleted-tasks checkbox"
+  checkBox.className = "functionality__incompleted-tasks__task__checkbox checkbox"
   editInput.type = "text";
-  editInput.className = "functionality__incompleted-tasks task-input";
+  editInput.className = "functionality__incompleted-tasks__task__text task-input";
 
   editButton.innerText = "Edit"; //innerText encodes special characters, HTML does not.
-  editButton.className = "functionality__incompleted-tasks btn-edit btn";
+  editButton.className = "functionality__incompleted-tasks__edit btn-edit btn";
 
-  deleteButton.className = "functionality__incompleted-tasks btn-delete btn";
-  deleteButtonImg.className = "functionality__incompleted-tasks delete-img"
+  deleteButton.className = "functionality__incompleted-tasks__delete btn-delete btn";
+  deleteButtonImg.className = "functionality__incompleted-tasks__delete__img delete-img"
   deleteButtonImg.src = "./remove.svg";
   deleteButtonImg.alt = "delete-img"
   deleteButton.appendChild(deleteButtonImg);
@@ -128,17 +128,17 @@ var taskCompleted = function() {
   //Append the task list item to the #completed-tasks
   var listItem = this.parentNode;
   if (listItem.classList.contains("edit-tasks")) {
-    listItem.classList = "functionality__completed-tasks task edit-tasks"
+    listItem.classList = "functionality__completed-tasks__task task edit-tasks"
 
   } else {
-    listItem.classList = "functionality__completed-tasks task"
+    listItem.classList = "functionality__completed-tasks__task task"
   }
-  listItem.children[0].classList = "functionality__completed-tasks checkbox"
-  listItem.children[1].classList = "functionality__completed-tasks task-description"
-  listItem.children[2].classList = "functionality__completed-tasks task-input"
-  listItem.children[3].classList = "functionality__completed-tasks btn-edit btn"
-  listItem.children[4].classList = "functionality__completed-tasks btn-delete btn"
-  listItem.children[4].children[0].classList = "functionality__completed-tasks delete-img"
+  listItem.children[0].classList = "functionality__completed-tasks__task__checkbox checkbox"
+  listItem.children[1].classList = "functionality__completed-tasks__task__description task-description"
+  listItem.children[2].classList = "functionality__completed-tasks__task__text task-input"
+  listItem.children[3].classList = "functionality__completed-tasks__task__edit btn-edit btn"
+  listItem.children[4].classList = "functionality__completed-tasks__task__delete btn-delete btn"
+  listItem.children[4].children[0].classList = "functionality__completed-tasks__task__delete__img delete-img"
   completedTasksHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskIncomplete);
 
