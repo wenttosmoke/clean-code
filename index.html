@@ -1,71 +1,71 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <title>Todo App</title>
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
-</head>
+  <head>
+    <title>Todo App</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
+  </head>
 
-<body class="body">
-  <section class="app-description">
-    <img class="app-description__eisenhower-matrix" src="./eisenhower-matrix.jpg" alt="plan-of-deals">
-    <a class="app-desciption__more-inf" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
-  </section>
+  <body class="body">
+    <section class="app-description">
+      <img class="app-description__eisenhower-matrix" src="./eisenhower-matrix.jpg" alt="plan-of-deals">
+      <a class="app-desciption__more-inf" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
+    </section>
 
-  <section class="functionality">
+    <section class="functionality">
 
-    <p id="functionality adding-task">
-      <label class="label-new-task" for="new-task">Add Item</label>
-    </p>
+      <p id="functionality__adding-task">
+        <label class="functionality__adding-task__label label-new-task" for="new-task">Add Item</label>
+      </p>
 
-    <div class="functionality__task-wrapper">
-      <input id="new-task" class="functionality__task-wrapper__task" type="text">
-      <button class="functionality__task-wrapper btn">Add</button>
-    </div>
+      <div class="functionality__task-wrapper">
+        <input class="functionality__task-wrapper__task" id="new-task"  type="text">
+        <button class="functionality__task-wrapper__add btn">Add</button>
+      </div>
 
-    <h3 class="functionality__section1 section-title">Todo</h3>
+      <h3 class="functionality__section1 section-title">Todo</h3>
 
-    <ul id="functionality__incompleted-tasks">
+      <ul id="functionality__incompleted-tasks">
 
-      <li class="functionality__incompleted-tasks task">
-        <input class="functionality__incompleted-tasks checkbox" type="checkbox">
-        <label class="functionality__incompleted-tasks task-description">Pay Bills</label>
-        <input id="text" type="text" class="functionality__incompleted-tasks task-input">
-        <button class="functionality__incompleted-tasks btn-edit btn">Edit</button>
-        <button class="functionality__incompleted-tasks btn-delete btn">
-          <img class="functionality__incompleted-tasks delete-img" src="./remove.svg" alt="delete-img">
-        </button>
-      </li>
+        <li class="functionality__incompleted-tasks task">
+          <input class="functionality__incompleted-tasks__task__checkbox checkbox" type="checkbox">
+          <label class="functionality__incompleted-tasks__task__description task-description">Pay Bills</label>
+          <input class="functionality__incompleted-tasks__task__text task-input" id="text" type="text" >
+          <button class="functionality__incompleted-tasks__task__edit  btn-edit btn">Edit</button>
+          <button class="functionality__incompleted-tasks__task__delete btn-delete btn">
+            <img class="functionality__incompleted-tasks__task__delete__img delete-img" src="./remove.svg" alt="delete-img">
+          </button>
+        </li>
 
-      <li class="functionality__incompleted-tasks task edit-tasks">
-        <input class="functionality__incompleted-tasks checkbox" type="checkbox">
-        <label class="functionality__incompleted-tasks task-description">Go Shopping</label>
-        <input id="text" type="text" value="Go Shopping" class="functionality__incompleted-tasks task-input">
-        <button class="functionality__incompleted-tasks btn-edit btn">Save</button>
-        <button class="functionality__incompleted-tasks btn-delete btn">
-          <img class="functionality__incompleted-tasks delete-img" src="./remove.svg" alt="delete-img">
-        </button>
-      </li>
+        <li class="functionality__incompleted-tasks__task task edit-tasks">
+          <input class="functionality__incompleted-tasks__task__checkbox checkbox" type="checkbox">
+          <label class="functionality__incompleted-tasks__task__description  task-description">Go Shopping</label>
+          <input class="functionality__incompleted-tasks__task__text  task-input" id="text" type="text" value="Go Shopping" >
+          <button class="functionality__incompleted-tasks__task__edit  btn-edit btn">Save</button>
+          <button class="functionality__incompleted-tasks__task__delete  btn-delete btn">
+            <img class="functionality__incompleted-tasks__task__delete__img delete-img" src="./remove.svg" alt="delete-img">
+          </button>
+        </li>
 
-    </ul>
+      </ul>
 
-    <h3 class="functionality__section2 section-title">Completed</h3>
+      <h3 class="functionality__section2 section-title">Completed</h3>
 
-    <ul id="functionality__completed-tasks">
-      <li class="functionality__completed-tasks task">
-        <input class="functionality__completed-tasks checkbox" type="checkbox" checked>
-        <label class="functionality__completed-tasks task-description">See the Doctor</label>
-        <input id="text" type="text" class="functionality__completed-tasks task-input">
-        <button class="functionality__completed-tasks btn-edit btn">Edit</button>
-        <button class="functionality__completed-tasks btn-delete btn">
-          <img class="functionality__completed-tasks delete-img" src="./remove.svg" alt="delete-img">
-        </button>
-      </li>
-    </ul>
+      <ul id="functionality__completed-tasks">
+        <li class="functionality__completed-tasks__task task">
+          <input class="functionality__completed-tasks__task__checkbox checkbox" type="checkbox" checked>
+          <label class="functionality__completed-tasks__task__description task-description">See the Doctor</label>
+          <input class="functionality__completed-tasks__task__text task-input" id="text" type="text" >
+          <button class="functionality__completed-tasks__task__edit btn-edit btn">Edit</button>
+          <button class="functionality__completed-tasks__task__delete btn-delete btn">
+            <img class="functionality__completed-tasks__task__delete__img delete-img" src="./remove.svg" alt="delete-img">
+          </button>
+        </li>
+      </ul>
 
-  </section>
-  <script src="app.js"></script>
-</body>
+    </section>
+    <script src="app.js"></script>
+  </body>
 
 </html>
