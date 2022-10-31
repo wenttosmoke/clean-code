@@ -43,10 +43,10 @@ var createNewTaskElement = function(taskString) {
   editInput.className = "functionality__incompleted-tasks__task__text task-input";
 
   editButton.innerText = "Edit"; //innerText encodes special characters, HTML does not.
-  editButton.className = "functionality__incompleted-tasks__edit btn-edit btn";
+  editButton.className = "functionality__incompleted-tasks__task__edit btn-edit btn";
 
-  deleteButton.className = "functionality__incompleted-tasks__delete btn-delete btn";
-  deleteButtonImg.className = "functionality__incompleted-tasks__delete__img delete-img"
+  deleteButton.className = "functionality__incompleted-tasks__task__delete btn-delete btn";
+  deleteButtonImg.className = "functionality__incompleted-tasks__task__delete__img delete-img"
   deleteButtonImg.src = "./remove.svg";
   deleteButtonImg.alt = "delete-img"
   deleteButton.appendChild(deleteButtonImg);
